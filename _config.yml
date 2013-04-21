@@ -9,13 +9,13 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : C S C
+title: C S C
 tagline: Site Tagline
-author :
-  name : Liezl Puzon
-  email : liezl.200@gmail.com
-  github : liezl200
-  twitter : liezlp
+author:
+  name: Liezl Puzon
+  email: liezl.200@gmail.com
+  github: liezl200
+  twitter: liezl200
 #  feedburner : none
 
 # The production_url is only used when full-domain names are needed
@@ -112,9 +112,8 @@ JB :
   # Set 'provider' to the sharing provider you want to use.
   # Set 'provider' to false to turn sharing off globally.
   #
-  sharing : tweet
-    provider : 
-    
+  sharing : 
+    provider : false
   # Settings for all other include helpers can be defined by creating 
   # a hash with key named for the given helper. ex:
   #
@@ -125,4 +124,4 @@ JB :
   # and include your custom code. Your custom file must be defined at:
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
-  
+
