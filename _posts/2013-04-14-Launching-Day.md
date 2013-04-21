@@ -19,9 +19,15 @@ Out of these "prerequisites", I only knew the first one:
 
 ###Github!
 I'm not a master at this. It seriously takes some experience to get used to. So here are some super-basic instructions:
+<<<<<<< HEAD
 1. Create a GitHub account and [install GitHub](https://help.github.com/articles/set-up-git).
 2. It should probably ask you where to put your GitHub folder. Put it somewhere you'll remember because that's where your repositories will be.
 3. "Open a shell" in GitHub. I use some convoluted (but easy to understand) method where I open the GitHub GUI, Open an existing local repository, click "Tools", click "Open a shell here", and then use the cd command (change directory) to change my directory to the main GitHub folder. But, hey, it works...
+=======
+1. Install GitHub.
+2. It should probably ask you where to put your GitHub folder. Put it somewhere you'll remember because that's where your repositories will be.
+3. "Open a shell" in GitHub. I use some convoluted (but easy to understand) method where I open the GitHub GUI, Open an existing local repository, click "Settings", click "Open a shell here", and then use the cd command (change directory) to change my directory to the main GitHub folder. But, hey, it works...
+>>>>>>> cde01cf039c85db30e6af3a896faf8061b92548b
 4. **Follow [these steps](http://jekyllbootstrap.com/index.html#start-now) TO THE LETTER -- just do steps 1-2.**
 
 ###Ruby Gems + Windows = frustration.
@@ -34,6 +40,7 @@ I liked this [simple guide](http://www.testically.org/2012/02/02/installing-jeky
 
 3. Follow the instructions on the [official guide](https://github.com/oneclick/rubyinstaller/wiki/development-kit). BE VERY METICULOUS SO YOU DON'T HAVE TO REPEAT THINGS UNNECESSARILY.
 
+<<<<<<< HEAD
 4. config.yml should be in the DevKit folder (I used C:\Devkit). You can do a search on your computer if you forgot, like I did.
 
 5. Follow the test case the official guide provides, which involves running this command: `gem install json --platform=ruby`. IF IT WORKS FINE, GO TO STEP 7.
@@ -41,6 +48,15 @@ I liked this [simple guide](http://www.testically.org/2012/02/02/installing-jeky
 6. [Troubleshoot](https://github.com/oneclick/rubyinstaller/wiki/Troubleshooting). I had some insane [problem exactly like this](https://groups.google.com/forum/#!topic/octopress/8pH9tJqiirA) with remnants of cygwin not allowing me to use `gem install json --platform=ruby` for the test case. When I ran `gem install jekyll --platform=ruby` it failed at installing fast-stemmer for the same reason as it failed the test case *before* it could even try to install jekyll.
 
 7. Okay, now install Jekyll. Use `gem install jekyll --platform=ruby` (they recommend adding `--platform=ruby` in the official guide).
+=======
+5. config.yml should be in the DevKit folder (I used C:\Devkit). You can do a search on your computer if you forgot, like I did.
+
+6. Follow the test case the official guide provides, which involves running this command: `gem install json --platform=ruby`. IF IT WORKS FINE, GO TO STEP 6.
+
+7. [Troubleshoot](https://github.com/oneclick/rubyinstaller/wiki/Troubleshooting). I had some insane [problem exactly like this](https://groups.google.com/forum/#!topic/octopress/8pH9tJqiirA) with remnants of cygwin not allowing me to use `gem install json --platform=ruby` for the test case. When I ran `gem install jekyll --platform=ruby` it failed at installing fast-stemmer for the same reason as it failed the test case *before* it could even try to install jekyll.
+
+8. Okay, now install Jekyll. Use `gem install jekyll --platform=ruby` (they recommend adding `--platform=ruby` in the official guide for some reason)
+>>>>>>> cde01cf039c85db30e6af3a896faf8061b92548b
 
 ###Run the Jekyll Server!
 This allows you to preview your website.
