@@ -1,0 +1,13 @@
+#wrap{
+	background-color:gray;
+}
+#header1{
+	height: 100px;
+	margin: 0 auto;
+	text-align: center;
+	background-color: gray;
+}
+#full-width{
+	width:100%;
+	background:#00304F;
+};
