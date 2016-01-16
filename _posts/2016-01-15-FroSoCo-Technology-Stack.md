@@ -8,21 +8,31 @@ tags: [intermediate, web, php, codeigniter, datamapper]
 ---
 {% include JB/setup %}
 
-Installation Prerequisites:
--[XAMPP Server 5.6.15](https://www.apachefriends.org/index.html) -- Cross platform local PHP/ Apache server with MySQL
--[Sublime Text 2](http://www.sublimetext.com/2) -- Cross platform development environment (to edit our code!)
+###Installation Prerequisites:
+* [XAMPP Server 5.6.15](https://www.apachefriends.org/index.html) -- Cross platform local PHP/ Apache server with MySQL
+* [Sublime Text 2](http://www.sublimetext.com/2) -- Cross platform development environment (to edit our code!)
 
 ###Technology Stack Overview
--[PHP 5.4.44](http://php.net/manual/en/index.php) -- Server scripting language
--[CodeIgniter 2.1.4](https://codeigniter.com/user_guide/)* -- Model-View-Controller web framework built on PHP
--[DataMapper ORM](http://datamapper.wanwizard.eu/pages/toc.html)* -- Easier database models
--[MySQL](http://dev.mysql.com/doc/refman/5.7/en/) -- The underlying database that stores our data
--[CodeIgniter Template Library](https://github.com/jenssegers/CodeIgniter-Template-Library)* -- Template engine to make our designs consistent
+* [PHP 5.4.44](http://php.net/manual/en/index.php) -- Server scripting language
+* [CodeIgniter 2.1.4](https://codeigniter.com/user_guide/)* -- Model-View-Controller web framework built on PHP
+* [DataMapper ORM](http://datamapper.wanwizard.eu/pages/toc.html)* -- Easier database models
+* [MySQL](http://dev.mysql.com/doc/refman/5.7/en/) -- The underlying database that stores our data
+* [CodeIgniter Template Library](https://github.com/jenssegers/CodeIgniter-Template-Library)* -- Template engine to make our designs consistent
 
-1. Create a GitHub account and [install GitHub](https://help.github.com/articles/set-up-git).
-2. It should probably ask you where to put your GitHub folder. Put it somewhere you'll remember because that's where your repositories will be.
-3. "Open a shell" in GitHub. I use some convoluted (but easy to understand) method where I open the GitHub GUI, Open an existing local repository, click "Tools", click "Open a shell here", and then use the cd command (change directory) to change my directory to the main GitHub folder. But, hey, it works...
-4. **Follow [these steps](http://jekyllbootstrap.com/index.html#start-now) TO THE LETTER -- just do steps 1-2.**
+
+###Install and Open XAMPP
+Right after successful installation, choose the option to open the XAMPP control panel before quitting the installer. To open the XAMPP Control Panel in the future, use:
+* Mac: Applications > XAMPP > manager-osx
+* Windows: Start | Programs | XAMPP
+
+
+###Get Starter Code for FroSoCo Website
+1. [Download starter code](https://github.com/frosoco/frosoco-starter/archive/master.zip)
+2. Extract .zip file anywhere, but remember where you extract it to.
+3. Click "Open Application Folder" in the XAMPP Control Panel (You will need to have started the control panel as indicated in the previous section)
+4. Find and open the "htdocs" folder in this directory.
+5. Delete all the contents of the "htdocs" folder.
+6. Copy all of the files and folders from inside the unzipped folder from step 2 to "htdocs".
 
 ###Ruby Gems + Windows = frustration.
 This part was annoying. Read my steps first, then use the information in the guides to help you install. My input is really only if you have significant problems.
