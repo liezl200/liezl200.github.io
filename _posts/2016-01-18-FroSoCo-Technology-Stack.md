@@ -110,7 +110,6 @@ At this point, you will have set up the local server to host your code on localh
 			</div>
 
 4. Now let's fill the content section with actual content, by pasting the following between the `<div class="panel home">` and `</div>` tags.
-			```html
 			<h3>What does pre-assignment mean in general and to FroSoCo residents?</h3>
 			<p>Any living spaces left vacant once pre-assignment comes to an end are then filled via the Draw. Though the Draw is not an entirely random process (it utilizes a priority system), it does not take into consideration the unique interests of students, or the various themes found across campus.</p>
 			<p>By pre-assigning into FroSoCo and filling out a Residence Agreement, students bind themselves contractually to living in FroSoCo the following year, and so they cannot participate in the Housing Draw. Housing assignments for those who are pre-assigned are announced before the Draw.</p>
@@ -124,7 +123,6 @@ At this point, you will have set up the local server to host your code on localh
 				<li>Apply to be pre-assigned by the deadline and provide whatever documentation is required to support their application by that date</li>
 				<li>Be willing to forfeit going through the Draw or accepting alternate Draw exempt staff positions</li>
 			</ul>
-			```
 
 5. The best way to understand what is going on is to open your web browser and see what tags produce what kinds of formatting and outputs.
 	- `<h3></h3>` encloses subheadings (you can also try h1, h2, h3, ..., h6)
