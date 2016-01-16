@@ -9,15 +9,15 @@ tags: [intermediate, web, php, codeigniter, datamapper]
 {% include JB/setup %}
 
 Installation Prerequisites:
-[XAMPP Server 5.6.15](https://www.apachefriends.org/index.html) -- Cross platform local PHP/ Apache server with MySQL
-[Sublime Text 2](http://www.sublimetext.com/2) -- Cross platform development environment (to edit our code!)
+-[XAMPP Server 5.6.15](https://www.apachefriends.org/index.html) -- Cross platform local PHP/ Apache server with MySQL
+-[Sublime Text 2](http://www.sublimetext.com/2) -- Cross platform development environment (to edit our code!)
 
 ###Technology Stack Overview
-[PHP 5.4.44](http://php.net/manual/en/index.php) -- Server scripting language
-[CodeIgniter 2.1.4](https://codeigniter.com/user_guide/)* -- Model-View-Controller web framework built on PHP
-[DataMapper ORM](http://datamapper.wanwizard.eu/pages/toc.html)* -- Easier database models
-[MySQL](http://dev.mysql.com/doc/refman/5.7/en/) -- The underlying database that stores our data
-[CodeIgniter Template Library](https://github.com/jenssegers/CodeIgniter-Template-Library)* -- Template engine to make our designs consistent
+-[PHP 5.4.44](http://php.net/manual/en/index.php) -- Server scripting language
+-[CodeIgniter 2.1.4](https://codeigniter.com/user_guide/)* -- Model-View-Controller web framework built on PHP
+-[DataMapper ORM](http://datamapper.wanwizard.eu/pages/toc.html)* -- Easier database models
+-[MySQL](http://dev.mysql.com/doc/refman/5.7/en/) -- The underlying database that stores our data
+-[CodeIgniter Template Library](https://github.com/jenssegers/CodeIgniter-Template-Library)* -- Template engine to make our designs consistent
 
 1. Create a GitHub account and [install GitHub](https://help.github.com/articles/set-up-git).
 2. It should probably ask you where to put your GitHub folder. Put it somewhere you'll remember because that's where your repositories will be.
