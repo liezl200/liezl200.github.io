@@ -110,27 +110,27 @@ At this point, you will have set up the local server to host your code on localh
 
 4. Now let's fill the content section with actual content, by pasting the following between the `<div class="panel home">` and `</div>` tags.
 
-	<h3>What does pre-assignment mean in general and to FroSoCo residents?</h3>
-	<p>Pre-assignment is the process by which students can elect to opt out of the Housing Draw and commit to live in a specific house the following year. Some of Stanford's on-campus residences offer special academic, cultural, or social programs. Several residences sponsor foreign language study. Other residences support a &ldquo;cooperative lifestyle&rdquo;. In these houses known as &ldquo;co-ops&rdquo;, students do all the cooking and cleaning that maintain the house &amp; support its residents. In brief, the purpose of pre-assignment is to support and promote the unique academic, social, and cultural programs that many Stanford residences offer. Students who are genuinely interested in, and committed to, a program in a particular residence can &ldquo;pre-assign&rdquo; into that residence.</p>
-	<p>For example, you can choose to stay in FroSoCo, and opt out of the Housing Draw, essentially building your own community of individuals that is committed to the lifestyle that FroSoCo offers.</p>
-	<p>Any living spaces left vacant once pre-assignment comes to an end are then filled via the Draw. Though the Draw is not an entirely random process (it utilizes a priority system), it does not take into consideration the unique interests of students, or the various themes found across campus.</p>
-	<p>By pre-assigning into FroSoCo and filling out a Residence Agreement, students bind themselves contractually to living in FroSoCo the following year, and so they cannot participate in the Housing Draw. Housing assignments for those who are pre-assigned are announced before the Draw.</p>
-	<p>ALL students who pre-assign into FroSoCo will receive premium spaces, i.e. single rooms and two- room doubles, unless they prefer otherwise. More significantly, FroSoCo requires a Tier-3 housing option for pre-assignment, but still offers premium spaces. Generally, a Tier-3 housing option in the Draw will not result in students receiving premium rooms.</p>
-	<h3>General requirements for pre-assignment</h3>
-	<p>In order to apply for pre-assignment students must:</p>
-	<ul>
-		<li>Be a currently registered undergraduate student and be eligible for registration the autumn quarter for which they are applying</li>
-		<li>Have a least one guaranteed year remaining at the time of the Draw</li>
-		<li>Be free of any holds on their student record that would preclude them from being pre-assigned to the house</li>
-		<li>Apply to be pre-assigned by the deadline and provide whatever documentation is required to support their application by that date</li>
-		<li>Be willing to forfeit going through the Draw or accepting alternate Draw exempt staff positions</li>
-	</ul>
+			<h3>What does pre-assignment mean in general and to FroSoCo residents?</h3>
+			<p>Pre-assignment is the process by which students can elect to opt out of the Housing Draw and commit to live in a specific house the following year. Some of Stanford's on-campus residences offer special academic, cultural, or social programs. Several residences sponsor foreign language study. Other residences support a &ldquo;cooperative lifestyle&rdquo;. In these houses known as &ldquo;co-ops&rdquo;, students do all the cooking and cleaning that maintain the house &amp; support its residents. In brief, the purpose of pre-assignment is to support and promote the unique academic, social, and cultural programs that many Stanford residences offer. Students who are genuinely interested in, and committed to, a program in a particular residence can &ldquo;pre-assign&rdquo; into that residence.</p>
+			<p>For example, you can choose to stay in FroSoCo, and opt out of the Housing Draw, essentially building your own community of individuals that is committed to the lifestyle that FroSoCo offers.</p>
+			<p>Any living spaces left vacant once pre-assignment comes to an end are then filled via the Draw. Though the Draw is not an entirely random process (it utilizes a priority system), it does not take into consideration the unique interests of students, or the various themes found across campus.</p>
+			<p>By pre-assigning into FroSoCo and filling out a Residence Agreement, students bind themselves contractually to living in FroSoCo the following year, and so they cannot participate in the Housing Draw. Housing assignments for those who are pre-assigned are announced before the Draw.</p>
+			<p>ALL students who pre-assign into FroSoCo will receive premium spaces, i.e. single rooms and two- room doubles, unless they prefer otherwise. More significantly, FroSoCo requires a Tier-3 housing option for pre-assignment, but still offers premium spaces. Generally, a Tier-3 housing option in the Draw will not result in students receiving premium rooms.</p>
+			<h3>General requirements for pre-assignment</h3>
+			<p>In order to apply for pre-assignment students must:</p>
+			<ul>
+				<li>Be a currently registered undergraduate student and be eligible for registration the autumn quarter for which they are applying</li>
+				<li>Have a least one guaranteed year remaining at the time of the Draw</li>
+				<li>Be free of any holds on their student record that would preclude them from being pre-assigned to the house</li>
+				<li>Apply to be pre-assigned by the deadline and provide whatever documentation is required to support their application by that date</li>
+				<li>Be willing to forfeit going through the Draw or accepting alternate Draw exempt staff positions</li>
+			</ul>
 
 5. The best way to understand what is going on is to open your web browser and see what tags produce what kinds of formatting and outputs.
-	- <h3></h3> encloses subheadings (you can also try h1, h2, h3, ..., h6)
-	- <p></p> encloses paragrahps
-	- <ul></ul> encloses an unordered list
-		- the "bullet points" of your list are each enclosed in <li></li> tags
+	- `<h3></h3>` encloses subheadings (you can also try h1, h2, h3, ..., h6)
+	- `<p></p>` encloses paragrahps
+	- `<ul></ul>` encloses an unordered list
+		- the "bullet points" of your list are each enclosed in `<li></li>` tags
 
 6. Let's add a little more by including some interactivity (page links!). Add the following on the line right after the `</ul>` but before the last `</div>`. This code shows us how to create a link to another website!
 
