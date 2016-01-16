@@ -9,6 +9,7 @@ tags: [intermediate, web, php, codeigniter, datamapper]
 {% include JB/setup %}
 
 ## PART 1: Setting Up
+
 ###Application Installation (Compatible with Mac/ Windows/ Linux)
 * [XAMPP Server 5.6.15](https://www.apachefriends.org/index.html) -- Cross platform local PHP/ Apache server with MySQL
 * [Sublime Text 2](http://www.sublimetext.com/2) -- Cross platform development environment (to edit our code!)
@@ -75,6 +76,7 @@ Right after successful installation, choose the option to open the XAMPP control
 At this point, you will have set up the local server to host your code on localhost, the starter code for this tutorial, and a database that will store the data that your code will be able to access & modify. To see the product of your hard work, click on the "Welcome" tab
 
 ##Part 2: Adding a Simple, Static Webpage
+
 ###Create a Static Application View
 
 ###Modify the "home.php" Controller to Display the View
@@ -92,6 +94,7 @@ At this point, you will have set up the local server to host your code on localh
 ###Create a Controller to Link Data to the View
 
 ##Ideas for Exploration
+
 ###Event Signups
 - Have a general template: event title, location, time, blurb/description, money etc
 - Allow the addition of individualized questions: do you have a car/how many does it seat, meal preferences/dietary restrictions, name of guest etc.
