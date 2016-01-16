@@ -27,9 +27,13 @@ Right after successful installation, choose the option to open the XAMPP control
 * Windows: Start | Programs | XAMPP
 
 1. Open the XAMPP Control Panel.
-2. Click "Manage Servers" button on the top bar.
+
+2. Click "Manage Servers" tab on the top bar in the XAMPP Control Panel.
+
 3. Click the name that says "Apache Web Server" in the main panel. Then, once this row is highlighted, hit the "Configure" button on the right.
+
 4. Click "Open Conf File" in the pop-up and then hit "Ok" to proceed with editing the file.
+
 5. Paste the following lines right after the line that says
 			<Directory "/Applications/XAMPP/xamppfiles/htdocs">
 
@@ -39,19 +43,33 @@ Right after successful installation, choose the option to open the XAMPP control
 			Order allow,deny
 			Allow from all
 
-
 ###Get Starter Code for FroSoCo Website
 1. [Download starter code](https://github.com/frosoco/frosoco-starter/archive/master.zip).
 
 2. Extract the downloaded .zip file anywhere, but remember where you extract it to.
 
-3. Click "Open Application Folder" in the XAMPP Control Panel (You will need to have started the control panel as indicated in the previous section).
+3. Click "Open Application Folder" in the "Welcome" tab of the XAMPP Control Panel (You will need to have started the control panel as indicated in the previous section).
 
 4. Find and open the "htdocs" folder in this directory.
 
 5. Delete all the contents of the "htdocs" folder.
 
 6. Copy all of the files and folders from inside the unzipped folder from step 2 to "htdocs".
+
+###Set Up Database
+1. [Download frosoco_db_import.sql file](/frosoco_db_import.sql).
+
+2. Point your browser to localhost/phpmyadmin.
+
+3. Hit "Databases" button on top bar.
+
+4. Type in 'g_frosoco_frosoco' and hit "Create".
+
+5. Hit "Import" on top bar.
+
+6. Hit "Choose File" and open the frosoco_db_import.sql file you downloaded in Step 1.
+
+At this point, you will have set up the local server to host your code on localhost, the starter code for this tutorial, and a database that will store the data that your code will be able to access & modify. To see the product of your hard work, click on the "Welcome" tab
 
 ###Ruby Gems + Windows = frustration.
 This part was annoying. Read my steps first, then use the information in the guides to help you install. My input is really only if you have significant problems.
