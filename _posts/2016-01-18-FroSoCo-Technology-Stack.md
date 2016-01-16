@@ -181,7 +181,6 @@ We first have to create a data table in our database to store users' quotes.
 3. Scroll down to the bottom where it says "Create table." Enter the Name "quotes" and type 4 for the Number of columns field. Hit "Go."
 
 4. Copy the fields how you see below (MAKE SURE A_I is checked for "id").
-<picture>
 
 ###Create a Database Model in Application Code
 
