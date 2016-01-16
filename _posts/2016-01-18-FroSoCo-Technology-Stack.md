@@ -82,7 +82,6 @@ At this point, you will have set up the local server to host your code on localh
 
 1. Add the following code to the file "application/controllers/home.php" after the policies function (paste on line #213):
 
-
 			/**
 			 *
 			 *
@@ -109,8 +108,6 @@ At this point, you will have set up the local server to host your code on localh
 
 			<div class="panel home">
 			</div>
-
-
 
 4. Now let's fill the content section with actual content, by pasting the following between the `<div class="panel home">` and `</div>` tags.
 
@@ -161,17 +158,172 @@ At this point, you will have set up the local server to host your code on localh
 
 8. As you can see, we can have nested <div>'s, and you can think of them like nested sections. Be careful, though, because the child <div> will inherit the style of the parent <div> which can make things very confusing.
 
-9. If you want to learn more, look into [Bootstrap](http://getbootstrap.com/examples/theme/) documentation to see what other awesome classes you can use. I would recommend just looking at existing pages on the FroSoCo website to see how they are built and formatted. Try using your browser's developer tools for even more powerful analysis of how pages are formatted.
+9. Let's modify our "application/views/template.php" file to add a "Preassignment" link in the "Help" dropdown menu. Add the following code under the Dorm Policies link in template.php.
+
+			<li>
+				<a href='/home/preassignment' >Preassignment</a>
+			</li>
+
+Learn more: If you want to learn more, look into [Bootstrap](http://getbootstrap.com/examples/theme/) documentation to see what other awesome classes you can use. I would recommend just looking at existing pages on the FroSoCo website to see how they are built and formatted. Try using your browser's developer tools for even more powerful analysis of how pages are formatted.
 
 ##Part 3: Creating a Dynamic Webpage
 
+For this section, we'll be creating a way to add FroSoQuotes to the quotes page. By the end, we will have something that looks like the [quote wall on the live site](frosoco.stanford.edu/quotes).
+
 ###Database Administration
+
+We first have to create a data table in our database to store users' quotes.
+
+1. Go to localhost/phpmyadmin in your browser.
+
+2. Click on the "g_frosoco_frosoco" database by clicking on its name in the left sidebar.
+
+3. Scroll down to the bottom where it says "Create table." Enter the Name "quotes" and type 4 for the Number of columns field. Hit "Go."
+
+4. Copy the fields how you see below (MAKE SURE A_I is checked for "id").
+<picture>
 
 ###Create a Database Model in Application Code
 
+Now we can link up our database design to be able to access the data through code.
+
+1. Create file "application/models/quote.php"
+
+2. Start out with the following. Note that the singular form of the object ("quote") is the class name, and it must extend DataMapper.
+
+			<?
+
+			class Quote extends DataMapper {
+
+			}
+
+			/* End of file quote.php */
+			/* Location: ./application/models/quote.php */
+
+
+3. Now inside the curly brackets, add the following. This line means that there is a relationship between a "quote" and a "user" -- namely, that each quote has one user (presumably the person submitting the quote). If you look back at our "quotes" datatable structure, this is why we needed the "user_id" column. The naming has to be very precise - if this column did not exist in our datatable, there would be errors down the line. This is why mis-spellings are sometimes the most frustrating bugs that are very hard to catch.
+
+			var $has_one = array("user");
+
+4. Let's add a little bit more code right after the line we added above, which you will see later is a commonly-used DataMapper shortcut.
+
+			function __construct($id = NULL)
+			{
+				parent::__construct($id);
+			}
+
 ###Create a Dynamic Application View
 
+We will now create a view, similar to the static view, except that it will be different depending on what kind of data is in the database.
+
+1. Create a folder "application/views/quotes" then create a file within this folder called "index.php"
+
+2. Add the following code in this file.
+
+			<div class="content-cards">
+			<? foreach ($quotes as $quote) { ?>
+			<div class="content-card content-quote">
+				<div class="content-body"><? echo $quote->text; ?></div>
+				<div class="content-info">
+					<span class="content-author"><? echo $quote->author; ?>
+				</div>
+			</div>
+			<? } ?>
+			</div>
+			<script>
+				var container = document.querySelector('.content-cards');
+				var msnry = new Masonry(container, {
+					itemSelector: '.content-card'
+				});
+			</script>
+
+3. You can ignore the `<script></script>` portion - it's just using a library to make the format of the quotes prettier. The important part here is the "foreach" loop. The `<? ?>` is a special structure that encloses PHP code. In this case, the view is going through each of the quote objects it is given, and creating a new content card section. This is why you see a `<? } ?>` after the end of this first div section after the foreach -- the `<? } ?>` indicates the end of the loop body.
+
 ###Create a Controller to Link Data to the View
+
+We saw how to create the model and figured out how to create a view to dictate how the page should look. But we haven't gone over exactly how the web application GIVES the view the proper objects and how the web app determines when this page should load. That is what the controller is for. When you type in a URL, the web application searches for the appropriate controller, and then the code inside this controller tells the web app what to display. In this case, since we are building a quotes page located at "localhost/quotes," we should create a controller file in the "application/controllers" folder called "quotes.php"
+
+1. Create the file "application/controllers/quotes.php" if you haven't already.
+
+2. Add the following skeleton code in the file.
+
+			<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+			class Quotes extends CI_Controller {
+
+
+			}
+
+3. In between the curly brackets, add the `index()` function:
+
+			public function index() {
+
+				$quote = new Quote();
+				// hacky way to view most recent quotes first (prefer timestamps for future)
+				$quote->order_by("id", "desc");
+				$data['quotes'] = $quote->get();
+
+				// Create the view
+				$this->template->title = 'Quotes';
+				$this->template->javascript->add('assets/js/masonry.min.js');
+				$this->template->content->view('quotes/index', $data);
+				$this->template->publish();
+
+			}
+
+4. Now we will be able to view quotes on the main page (localhost/quotes), but our database is empty. To fix this, we will first create a form that will allow users to enter quotes and submit them to the database. Add a file in "application/views/create/" called "quote.php" then add the following code:
+
+			<div class="create-editor quote">
+				<form action="/quotes/add" method="post">
+				<div class="create-quote">
+					<textarea name="body" id="create-body" placeholder="Insanity: doing the same thing over and over again and expecting different results."></textarea>
+				</div>
+				<div class="create-author">
+					<input name="author" id="create-author" type="text" placeholder="Albert Einstein" autocomplete="none" />
+				</div>
+				<div class="create-actions">
+					<button type="submit" class="btn btn-default">Submit</button>
+				</div>
+				</form>
+			</div>
+
+
+5. We should always remember that for every view, there must be a controller to so that the application can route a url to appropriate behavior (which in this case, is simply to render the form view). Add the following function in the "create.php" controller (Line #63 is a good place).
+
+			public function quote()
+			{
+
+				if (!$this->authorized()) {
+					header('Location: /login');
+				}
+
+				// Create the view
+				$this->template->title = 'Create Quote';
+				$this->template->content->view('create/quote', $data);
+				$this->template->publish();
+
+			}
+
+5. The next step is to program the function specified by `form action`. In this case, we are telling the application that when the submit button is clicked, it should call on the "/quotes/add" url to process the entered data. In this case, we have chosen to have the information processing in the quotes controller, with the function `add()`. Let's create this function in the "application/controllers/quotes.php" controller. Essentially, the following code is creating a new Quote object, setting the necessary information based on the user session and the form inputs. `$quote->save();` is the crucial line that adds the entry to the database. `header('Location: /quotes');` redirects us back to the quotes index page (localhost/quotes).
+
+			public function add() {
+
+				$quote = new Quote();
+				$quote->user_id = $this->session->userdata('id');
+				$quote->text = $this->input->post('body');
+				$quote->author = $this->input->post('author');
+				$quote->save();
+
+				header('Location: /quotes');
+
+			}
+
+6. We can always access the page to create a quote by typing localhost/create/quote directly into our browser. However, a normal user expects to be able to navigate to this page without having to know the exact address to type in. To finish off this feature, add the following button to the top of "application/views/quotes.php"
+
+			<div class="create-actions clearfix">
+				<a href="/create/quote"><button class="btn create-btn">+ Add Quote</button></a>
+			</div>
+
 
 ##Ideas for Exploration
 
