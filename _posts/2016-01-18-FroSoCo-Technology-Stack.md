@@ -140,7 +140,7 @@ and maybe if someone RSVPs it sends them a calendar invite so it's on their pers
 - Not sure if we want to do this, but it could be useful to have hall-specific sub-calendars so we can coordinate those events as well
 
 ###A back-end database with resident information
-- this was helpful because it had all of the relevant resident information that we need at different times of the year
+- This was helpful because it had all of the relevant resident information that we need at different times of the year
 	- First name, last name, email, phone number, birthday, gender, SUID, Adams/Schiff, room number, frosh/soph/staff, dietary restrictions, ER contact information, a photo, etc.
 - Then when we needed the info, we could concatenate it with the event sign-up vs. having to ask them to fill those questions out again
 
@@ -159,10 +159,10 @@ a subset of this is "which classes do you recommend?" and/or "who are some great
 
 ###Other Ways to Communicate
 - Right now we generally have these mediums:
-		* email
-		* bathroom flyers
-		* hall white boards
-		* signs on the exit doors
-		* hall and house announcements
-		* Facebook
+		- email
+		- bathroom flyers
+		- hall white boards
+		- signs on the exit doors
+		- hall and house announcements
+		- Facebook
 - There could be a ton of others: instagram, snap chat, vines, a youtube channel, etc.
