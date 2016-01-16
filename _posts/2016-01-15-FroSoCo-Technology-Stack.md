@@ -8,30 +8,49 @@ tags: [intermediate, web, php, codeigniter, datamapper]
 ---
 {% include JB/setup %}
 
-###Installation Prerequisites:
+###Installation Prerequisites
 * [XAMPP Server 5.6.15](https://www.apachefriends.org/index.html) -- Cross platform local PHP/ Apache server with MySQL
 * [Sublime Text 2](http://www.sublimetext.com/2) -- Cross platform development environment (to edit our code!)
 
 ###Technology Stack Overview
-* [PHP 5.4.44](http://php.net/manual/en/index.php) -- Server scripting language
+The starred links have tutorials worth reviewing for basic knowledge. Because the FroSoCo website combines a lot of these technologies, it is important to understand that the database portions in the CodeIgniter tutorial do things differently than we will be learning in this tutorial.
+* [PHP 5.4.44](http://php.net/manual/en/index.php) -- Server scripting language.
 * [CodeIgniter 2.1.4](https://codeigniter.com/user_guide/)* -- Model-View-Controller web framework built on PHP
 * [DataMapper ORM](http://datamapper.wanwizard.eu/pages/toc.html)* -- Easier database models
 * [MySQL](http://dev.mysql.com/doc/refman/5.7/en/) -- The underlying database that stores our data
-* [CodeIgniter Template Library](https://github.com/jenssegers/CodeIgniter-Template-Library)* -- Template engine to make our designs consistent
+* [CodeIgniter Template Library](https://github.com/jenssegers/CodeIgniter-Template-Library) -- Template engine to make our designs consistent
 
 
-###Install and Open XAMPP
-Right after successful installation, choose the option to open the XAMPP control panel before quitting the installer. To open the XAMPP Control Panel in the future, use:
+###Install, Open, and Configure XAMPP
+Right after successful installation, choose the option to open the XAMPP control panel before quitting the installer. Here's how you can open the XAMPP Control Panel in the future.
 * Mac: Applications > XAMPP > manager-osx
 * Windows: Start | Programs | XAMPP
 
+1. Open the XAMPP Control Panel.
+2. Click "Manage Servers" button on the top bar.
+3. Click the name that says "Apache Web Server" in the main panel. Then, once this row is highlighted, hit the "Configure" button on the right.
+4. Click "Open Conf File" in the pop-up and then hit "Ok" to proceed with editing the file.
+5. Paste the following lines right after the line that says
+			<Directory "/Applications/XAMPP/xamppfiles/htdocs">
+
+			AllowOverride All
+			Options +Indexes
+			DirectoryIndex index.php
+			Order allow,deny
+			Allow from all
+
 
 ###Get Starter Code for FroSoCo Website
-1. [Download starter code](https://github.com/frosoco/frosoco-starter/archive/master.zip)
-2. Extract .zip file anywhere, but remember where you extract it to.
-3. Click "Open Application Folder" in the XAMPP Control Panel (You will need to have started the control panel as indicated in the previous section)
+1. [Download starter code](https://github.com/frosoco/frosoco-starter/archive/master.zip).
+
+2. Extract the downloaded .zip file anywhere, but remember where you extract it to.
+
+3. Click "Open Application Folder" in the XAMPP Control Panel (You will need to have started the control panel as indicated in the previous section).
+
 4. Find and open the "htdocs" folder in this directory.
+
 5. Delete all the contents of the "htdocs" folder.
+
 6. Copy all of the files and folders from inside the unzipped folder from step 2 to "htdocs".
 
 ###Ruby Gems + Windows = frustration.
