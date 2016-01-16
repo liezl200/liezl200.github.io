@@ -105,10 +105,14 @@ At this point, you will have set up the local server to host your code on localh
 			</div>
 
 3. After this code, add a content section as follows. You can begin to notice patterns, namely that the `<div>` tags (HTML tags are anything with < > and follow special syntax rules to produce text exactly how you want it to look) denote particular sections and that the different `class` attribute values dictate different types of section. (an attribute is anything in an HTML tag that looks like `attribute="value"`). `</div>` simply denotes the end of a particular section (in fact, anything that looks like </ > is called a closing tag).
-			{% highlight html %}
-			<div class="panel home">
-			</div>
-			{% endhighlight %}
+
+<pre>
+  <code class="html">
+    <div class="panel home">
+		</div>
+  </code>
+</pre>
+
 
 4. Now let's fill the content section with actual content, by pasting the following between the `<div class="panel home">` and `</div>` tags.
 			<h3>What does pre-assignment mean in general and to FroSoCo residents?</h3>
@@ -243,3 +247,6 @@ a subset of this is "which classes do you recommend?" and/or "who are some great
 		- hall and house announcements
 		- Facebook
 - There could be a ton of others: instagram, snap chat, vines, a youtube channel, etc.
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
