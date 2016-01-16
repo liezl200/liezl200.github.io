@@ -75,15 +75,93 @@ Right after successful installation, choose the option to open the XAMPP control
 
 At this point, you will have set up the local server to host your code on localhost, the starter code for this tutorial, and a database that will store the data that your code will be able to access & modify. To see the product of your hard work, click on the "Welcome" tab
 
-##Part 2: Adding a Simple, Static Webpage
-
-###Create a Static Application View
+##Part 2: Adding a Static Webpage
 
 ###Modify the "home.php" Controller to Display the View
 
-##Part 3: Templating / Consistent Design
+1. Add the following code to the file "application/controllers/home.php" after the policies function (paste on line #213):
 
-##Part 4: Creating a Dynamic Webpage
+			/**
+			 *
+			 *
+			 * URL: /home/preassignment
+			 */
+			public function preassignment()
+			{
+				$this->template->title = 'Preassignment';
+				$this->template->content->view('static/preassignment');
+				$this->template->publish();
+			}
+
+###Create a Static Application View
+
+1. Create a new file and save it as "application/views/static/preassignment.php" (since we have already added the `preassignment()` function to the home.php controller, we should be able to point our browsers to the url 'localhost/home/preassignment' and be able to see a blank page). Feel free to periodically refresh the webpage as you are working on it so you can see how the page changes with each step or two.
+
+2. We'll start building this webpage by adding a header for the page.
+
+			<div class="page-header">
+				<h1>Preassignment</h1>
+			</div>
+
+3. After this code, add a content section as follows. You can begin to notice patterns, namely that the `<div>` tags (HTML tags are anything with < > and follow special syntax rules to produce text exactly how you want it to look) denote particular sections and that the different `class` attribute values dictate different types of section. (an attribute is anything in an HTML tag that looks like `attribute="value"`). `</div>` simply denotes the end of a particular section (in fact, anything that looks like </ > is called a closing tag).
+
+			<div class="panel home">
+			</div>
+
+4. Now let's fill the content section with actual content, by pasting the following between the `<div class="panel home">` and `</div>` tags.
+
+	<h3>What does pre-assignment mean in general and to FroSoCo residents?</h3>
+	<p>Pre-assignment is the process by which students can elect to opt out of the Housing Draw and commit to live in a specific house the following year. Some of Stanford's on-campus residences offer special academic, cultural, or social programs. Several residences sponsor foreign language study. Other residences support a &ldquo;cooperative lifestyle&rdquo;. In these houses known as &ldquo;co-ops&rdquo;, students do all the cooking and cleaning that maintain the house &amp; support its residents. In brief, the purpose of pre-assignment is to support and promote the unique academic, social, and cultural programs that many Stanford residences offer. Students who are genuinely interested in, and committed to, a program in a particular residence can &ldquo;pre-assign&rdquo; into that residence.</p>
+	<p>For example, you can choose to stay in FroSoCo, and opt out of the Housing Draw, essentially building your own community of individuals that is committed to the lifestyle that FroSoCo offers.</p>
+	<p>Any living spaces left vacant once pre-assignment comes to an end are then filled via the Draw. Though the Draw is not an entirely random process (it utilizes a priority system), it does not take into consideration the unique interests of students, or the various themes found across campus.</p>
+	<p>By pre-assigning into FroSoCo and filling out a Residence Agreement, students bind themselves contractually to living in FroSoCo the following year, and so they cannot participate in the Housing Draw. Housing assignments for those who are pre-assigned are announced before the Draw.</p>
+	<p>ALL students who pre-assign into FroSoCo will receive premium spaces, i.e. single rooms and two- room doubles, unless they prefer otherwise. More significantly, FroSoCo requires a Tier-3 housing option for pre-assignment, but still offers premium spaces. Generally, a Tier-3 housing option in the Draw will not result in students receiving premium rooms.</p>
+	<h3>General requirements for pre-assignment</h3>
+	<p>In order to apply for pre-assignment students must:</p>
+	<ul>
+		<li>Be a currently registered undergraduate student and be eligible for registration the autumn quarter for which they are applying</li>
+		<li>Have a least one guaranteed year remaining at the time of the Draw</li>
+		<li>Be free of any holds on their student record that would preclude them from being pre-assigned to the house</li>
+		<li>Apply to be pre-assigned by the deadline and provide whatever documentation is required to support their application by that date</li>
+		<li>Be willing to forfeit going through the Draw or accepting alternate Draw exempt staff positions</li>
+	</ul>
+
+5. The best way to understand what is going on is to open your web browser and see what tags produce what kinds of formatting and outputs.
+	- <h3></h3> encloses subheadings (you can also try h1, h2, h3, ..., h6)
+	- <p></p> encloses paragrahps
+	- <ul></ul> encloses an unordered list
+		- the "bullet points" of your list are each enclosed in <li></li> tags
+
+6. Let's add a little more by including some interactivity (page links!). Add the following on the line right after the `</ul>` but before the last `</div>`. This code shows us how to create a link to another website!
+
+			<h3>Are you ready to apply for pre-assignment?</h3>
+			<p>You can apply for pre-assignment by submitting an application through the SAAS  website at <a href="http://saas.stanford.edu">(Click here)</a>.</p>
+			<p>More Info: <a href="http://studentaffairs.stanford.edu/resed/profiles/theme/how-to-apply">http://studentaffairs.stanford.edu/resed/profiles/theme/how-to-apply</a></p>
+
+7. Let's get even fancier and add a sidebar on the right-hand side. Add the following code after the last `</div>` (the very end of the page)
+
+			<div id="sidebar">
+				<h3>Useful links for information about pre-assignment and housing</h3>
+				<p><a href="http://studentaffairs.stanford.edu/resed/profiles/theme/how-to-apply">Pre-Assignment Website</a></p>
+				<p><a href="http://studentaffairs.stanford.edu/resed/profiles/theme/list">Review Theme House Requirements</a></p>
+				<p><a href="http://studentaffairs.stanford.edu/resed/profiles/regular/govco/frosoco">FroSoCo's Information Page</a></p>
+				<p><a href="http://saas.stanford.edu/">Pre-Assignment Application</a></p>
+				<p><a href="http://www.stanford.edu/dept/rde/cgi-bin/drupal/housing/">Student Housing</a></p>
+				<p><a href="http://www.stanford.edu/dept/rde/cgi-bin/drupal/housing/charts/draw-stats-2012">Undergraduate Housing Residence Chart 2011-12</a></p>
+				<p><a href="http://houserank.stanford.edu">House Rank</a></p>
+				<p>For questions about pre-assignment to FroSoCo, contact Mona Kitasoe (kitasoe@stanford.edu). You can also speak with the staff and/or CDs if you have questions.</p>
+				<div class="alert alert-info">
+					<p><strong>Downloads</strong></p>
+					<p><a href="/assets/documents/2015-16FSCPreassignmentFAQs.pdf">2015-16 FSC Preassignment FAQs</a></p>
+					<p><a href="/assets/documents/2015-16PreAssignInfo.pdf">2015-16 FSC Preassignment Info</a></p>
+				</div>
+			</div>
+
+8. As you can see, we can have nested <div>'s, and you can think of them like nested sections. Be careful, though, because the child <div> will inherit the style of the parent <div> which can make things very confusing.
+
+9. If you want to learn more, look into [Bootstrap](http://getbootstrap.com/examples/theme/) documentation to see what other awesome classes you can use. I would recommend just looking at existing pages on the FroSoCo website to see how they are built and formatted. Try using your browser's developer tools for even more powerful analysis of how pages are formatted.
+
+##Part 3: Creating a Dynamic Webpage
 
 ###Database Administration
 
