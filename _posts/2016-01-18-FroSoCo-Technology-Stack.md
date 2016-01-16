@@ -82,6 +82,8 @@ At this point, you will have set up the local server to host your code on localh
 
 1. Add the following code to the file "application/controllers/home.php" after the policies function (paste on line #213):
 
+<pre>
+  <code class="php">
 			/**
 			 *
 			 *
@@ -93,6 +95,8 @@ At this point, you will have set up the local server to host your code on localh
 				$this->template->content->view('static/preassignment');
 				$this->template->publish();
 			}
+	</code>
+</pre>
 
 ###Create a Static Application View
 
