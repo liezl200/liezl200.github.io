@@ -84,17 +84,17 @@ At this point, you will have set up the local server to host your code on localh
 
 <pre>
   <code class="PHP">
-			/**
-			 *
-			 *
-			 * URL: /home/preassignment
-			 */
-			public function preassignment()
-			{
-				$this->template->title = 'Preassignment';
-				$this->template->content->view('static/preassignment');
-				$this->template->publish();
-			}
+/**
+ *
+ *
+ * URL: /home/preassignment
+ */
+public function preassignment()
+{
+	$this->template->title = 'Preassignment';
+	$this->template->content->view('static/preassignment');
+	$this->template->publish();
+}
 	</code>
 </pre>
 
@@ -112,8 +112,8 @@ At this point, you will have set up the local server to host your code on localh
 
 <pre>
   <code class="html">
-    <div class="panel home">
-		</div>
+<div class="panel home">
+</div>
   </code>
 </pre>
 
@@ -254,3 +254,4 @@ a subset of this is "which classes do you recommend?" and/or "who are some great
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/default.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
