@@ -168,7 +168,7 @@ Learn more: If you want to learn more, look into [Bootstrap](http://getbootstrap
 
 ##Part 3: Creating a Dynamic Webpage
 
-For this section, we'll be creating a way to add FroSoQuotes to the quotes page. By the end, we will have something that looks like the [quote wall on the live site](frosoco.stanford.edu/quotes).
+For this section, we'll be creating a way to add FroSoQuotes to the quotes page. By the end, we will have something that looks like the [quote wall on the live site](http://frosoco.stanford.edu/quotes).
 
 ###Database Administration
 
