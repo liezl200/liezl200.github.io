@@ -110,15 +110,13 @@ public function preassignment()
 
 3. After this code, add a content section as follows. You can begin to notice patterns, namely that the `<div>` tags (HTML tags are anything with < > and follow special syntax rules to produce text exactly how you want it to look) denote particular sections and that the different `class` attribute values dictate different types of section. (an attribute is anything in an HTML tag that looks like `attribute="value"`). `</div>` simply denotes the end of a particular section (in fact, anything that looks like </ > is called a closing tag).
 
-<pre>
-  <code class="html">
-<div class="panel home">
-</div>
-  </code>
-</pre>
+			<div class="panel home">
+			</div>
+
 
 
 4. Now let's fill the content section with actual content, by pasting the following between the `<div class="panel home">` and `</div>` tags.
+
 			<h3>What does pre-assignment mean in general and to FroSoCo residents?</h3>
 			<p>Any living spaces left vacant once pre-assignment comes to an end are then filled via the Draw. Though the Draw is not an entirely random process (it utilizes a priority system), it does not take into consideration the unique interests of students, or the various themes found across campus.</p>
 			<p>By pre-assigning into FroSoCo and filling out a Residence Agreement, students bind themselves contractually to living in FroSoCo the following year, and so they cannot participate in the Housing Draw. Housing assignments for those who are pre-assigned are announced before the Draw.</p>
