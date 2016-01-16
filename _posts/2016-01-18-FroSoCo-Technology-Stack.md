@@ -8,7 +8,8 @@ tags: [intermediate, web, php, codeigniter, datamapper]
 ---
 {% include JB/setup %}
 
-###Installation Prerequisites
+## PART 1: Setting Up
+###Application Installation (Compatible with Mac/ Windows/ Linux)
 * [XAMPP Server 5.6.15](https://www.apachefriends.org/index.html) -- Cross platform local PHP/ Apache server with MySQL
 * [Sublime Text 2](http://www.sublimetext.com/2) -- Cross platform development environment (to edit our code!)
 
@@ -37,7 +38,7 @@ Right after successful installation, choose the option to open the XAMPP control
 
 4. Click "Open Conf File" in the pop-up and then hit "Yes" to proceed with editing the file.
 
-5. Paste the following lines right after the line (around line 230) that says `<Directory "/Applications/XAMPP/xamppfiles/htdocs">`
+5. Paste the following lines right after the line (around line 230) that says `<Directory "/Applications/XAMPP/xamppfiles/htdocs">` (for Windows it will be a little bit different file path):
 
 			AllowOverride All
 			Options +Indexes
@@ -65,7 +66,7 @@ Right after successful installation, choose the option to open the XAMPP control
 
 3. Hit "Databases" button on top bar.
 
-4. Type in 'g_frosoco_frosoco' and hit "Create".
+4. Type in 'g_frosoco_frosoco' and hit "Create."
 
 5. Hit "Import" on top bar.
 
@@ -73,21 +74,19 @@ Right after successful installation, choose the option to open the XAMPP control
 
 At this point, you will have set up the local server to host your code on localhost, the starter code for this tutorial, and a database that will store the data that your code will be able to access & modify. To see the product of your hard work, click on the "Welcome" tab
 
-###Adding a Static Webpage
-1. Make sure you have no other version of Ruby installed. UNINSTALL THAT STUFF NOW to avoid problems later.
+##Part 2: Adding a Simple, Static Webpage
+###Create a Static Application View
 
-2. Install Ruby using a [RubyInstaller](http://rubyinstaller.org/downloads/). If you're running 64-bit Windows 7, like I am, I recommend you download the [x86 RubyInstaller 2.0.0](http://rubyinstaller.org/downloads/), because I had some issue with running the Jekyll server on the 64-bit version of 2.0.0. You will want to check off "Add Ruby executables to your PATH" and "Associate .rb and .rbw files with this Ruby installation," unless you want to configure those yourself.
+###Modify the "home.php" Controller to Display the View
 
-3. Then install the DevKit and have it extract all the files to anywhere, but remember the location because it is important.
+##Part 3: Templating / Consistent Design
 
-4. Follow the instructions on the [official guide](https://github.com/oneclick/rubyinstaller/wiki/development-kit). BE VERY METICULOUS SO YOU DON'T HAVE TO REPEAT THINGS UNNECESSARILY.
+##Part 4: Creating a Dynamic Webpage
 
-5. config.yml should be in the DevKit folder (I used C:\Devkit). You can do a search on your computer if you forgot, like I did.
+###Database Administration
 
-6. Follow the test case the official guide provides, which involves running this command: `gem install json --platform=ruby`. IF IT WORKS FINE, GO TO STEP 7.
+###Create a Database Model in Application Code
 
-7. [Troubleshoot](https://github.com/oneclick/rubyinstaller/wiki/Troubleshooting). I had some insane [problem exactly like this](https://groups.google.com/forum/#!topic/octopress/8pH9tJqiirA) with remnants of cygwin not allowing me to use `gem install json --platform=ruby` for the test case. When I ran `gem install jekyll --platform=ruby` it failed at installing fast-stemmer for the same reason as it failed the test case *before* it could even try to install jekyll.
+###Create a Dynamic Application View
 
-8. Okay, now install Jekyll. Use `gem install jekyll --platform=ruby` (they recommend adding `--platform=ruby` in the official guide).
-
-###
+###Create a Controller to Link Data to the View
