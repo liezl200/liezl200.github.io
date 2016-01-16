@@ -25,7 +25,9 @@ The starred links have tutorials worth reviewing for basic knowledge. Because th
 Right after successful installation, choose the option to open the XAMPP control panel before quitting the installer. Here's how you can open the XAMPP Control Panel in the future.
 
 * Mac: Applications > XAMPP > manager-osx
+
 * Windows: Start | Programs | XAMPP
+
 
 1. Open the XAMPP Control Panel.
 
@@ -33,11 +35,9 @@ Right after successful installation, choose the option to open the XAMPP control
 
 3. Click the name that says "Apache Web Server" in the main panel. Then, once this row is highlighted, hit the "Configure" button on the right.
 
-4. Click "Open Conf File" in the pop-up and then hit "Ok" to proceed with editing the file.
+4. Click "Open Conf File" in the pop-up and then hit "Yes" to proceed with editing the file.
 
-5. Paste the following lines right after the line that says
-
-			<Directory "/Applications/XAMPP/xamppfiles/htdocs">
+5. Paste the following lines right after the line (around line 230) that says <Directory "/Applications/XAMPP/xamppfiles/htdocs">
 
 			AllowOverride All
 			Options +Indexes
