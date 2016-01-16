@@ -8,15 +8,17 @@ tags: [intermediate, web, php, codeigniter, datamapper]
 ---
 {% include JB/setup %}
 
-Somehow, my experimenting created this monster. There's a sufficient amount of documentation regarding how to create your own static website with Jekyll/ Jekyll Bootstrap. But hopefully I can aggregate enough basic info to reduce the stress of dealing with an excessive amount of information - especially if you're new to front-end development.
+Installation Prerequisites:
+[XAMPP Server 5.6.15](https://www.apachefriends.org/index.html) -- Cross platform local PHP/ Apache server with MySQL
+[Sublime Text 2](http://www.sublimetext.com/2) -- Cross platform development environment (to edit our code!)
 
+###Technology Stack Overview
+[PHP 5.4.44](http://php.net/manual/en/index.php) -- Server scripting language
+[CodeIgniter 2.1.4](https://codeigniter.com/user_guide/)* -- Model-View-Controller web framework built on PHP
+[DataMapper ORM](http://datamapper.wanwizard.eu/pages/toc.html)* -- Easier database models
+[MySQL](http://dev.mysql.com/doc/refman/5.7/en/) -- The underlying database that stores our data
+[CodeIgniter Template Library](https://github.com/jenssegers/CodeIgniter-Template-Library)* -- Template engine to make our designs consistent
 
-Out of these "prerequisites", I only knew the first one, so don't worry if you are a beginner:
-- You should know how to use Git, the source control tool, and have it installed.
-- You should be comfortable with HTML, CSS, and other languages for building websites.
-- You should understand how to install a Ruby Gem.
-
-###Github!
 1. Create a GitHub account and [install GitHub](https://help.github.com/articles/set-up-git).
 2. It should probably ask you where to put your GitHub folder. Put it somewhere you'll remember because that's where your repositories will be.
 3. "Open a shell" in GitHub. I use some convoluted (but easy to understand) method where I open the GitHub GUI, Open an existing local repository, click "Tools", click "Open a shell here", and then use the cd command (change directory) to change my directory to the main GitHub folder. But, hey, it works...
