@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Index
-tagline: Why hello there.
+tagline:
 ---
 {% include JB/setup %}
 
