@@ -182,6 +182,8 @@ We first have to create a data table in our database to store users' quotes.
 
 4. Copy the fields how you see below (MAKE SURE A_I is checked for "id").
 
+![FroSoCo Quotes Datatable Structure](/quotestable.png)
+
 ###Create a Database Model in Application Code
 
 Now we can link up our database design to be able to access the data through code.
