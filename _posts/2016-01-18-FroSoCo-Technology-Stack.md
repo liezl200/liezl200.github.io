@@ -10,7 +10,7 @@ tags: [intermediate, web, php, codeigniter, datamapper]
 
 ## PART 1: Setting Up
 
-###Application Installation (Compatible with Mac/ Windows/ Linux)
+###Things to Install (Compatible with Mac/ Windows/ Linux)
 * [XAMPP Server 5.6.15](https://www.apachefriends.org/index.html) -- Cross platform local PHP/ Apache server with MySQL
 * [Sublime Text 2](http://www.sublimetext.com/2) -- Cross platform development environment (to edit our code!)
 
