@@ -272,7 +272,7 @@ We saw how to create the model and figured out how to create a view to dictate h
 
 			}
 
-4. Now we will be able to view quotes on the main page (localhost/quotes), but our database is empty. To fix this, we will first create a form that will allow users to enter quotes and submit them to the database. Add a file in "application/views/create/" called "quote.php" then add the following code:
+4. Now we will be able to view quotes on the main Quotes page (localhost/quotes), but our database is empty. To fix this, we will first create a form that will allow users to enter quotes and submit them to the database. Add a file in "application/views/create/" called "quote.php" then add the following code:
 
 			<div class="create-editor quote">
 				<form action="/quotes/add" method="post">
