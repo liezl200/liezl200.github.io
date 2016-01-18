@@ -300,7 +300,7 @@ We saw how to create the model and figured out how to create a view to dictate h
 
 				// Create the view
 				$this->template->title = 'Create Quote';
-				$this->template->content->view('create/quote', $data);
+				$this->template->content->view('create/quote');
 				$this->template->publish();
 
 			}
