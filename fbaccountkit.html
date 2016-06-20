@@ -27,7 +27,13 @@
           }
         );
       };
-
+        (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "https://sdk.lie.sb.accountkit.com/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'accountkit-jssdk'));
       // login callback
       function loginCallback(response) {
         console.log(response);
