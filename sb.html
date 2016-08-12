@@ -1,0 +1,58 @@
+Enter country code (e.g. +1):
+<input type="text" id="country_code" />
+Enter phone number without spaces (e.g. 444555666):
+<input type="text" id="phone_num"/>
+<a href="#" id="sms">Log via SMS</a>
+Enter email address
+<input type="text" id="email"/>
+<button onclick="email_btn_onclick();">Login via Email</button>
+
+
+<script type="text/javascript" src="https://sdk.lie.sb.accountkit.com/en_US/sdk.js?hash=62f911611192ead33e33d37745ba1ce1"></script>
+<script type="text/javascript">
+  // initialize Account Kit with CSRF protection
+  AccountKit_OnInteractive = function(){
+    AccountKit.init(
+      {
+        appId:140114039742924,
+        state:"donotguess",
+        version:"v1.0"
+      }
+    );
+  };
+
+  // login callback
+  function loginCallback(response) {
+    console.log(response);
+    if (response.status === "PARTIALLY_AUTHENTICATED") {
+      document.getElementById("code").value = response.code;
+      document.getElementById("csrf_nonce").value = response.state;
+      document.getElementById("my_form").submit();
+    }
+    else if (response.status === "NOT_AUTHENTICATED") {
+      // handle authentication failure
+    }
+    else if (response.status === "BAD_PARAMS") {
+      // handle bad parameters
+    }
+  }
+
+  // phone form submission handler
+
+
+
+  // email form submission handler
+  function email_btn_onclick() {
+    var email_address = document.getElementById("email").value;
+
+    AccountKit.login('EMAIL', {emailAddress: email_address}, loginCallback);
+  }
+
+  document.getElementById("sms").onclick = function() {
+    var country_code = document.getElementById("country_code").value;
+    var ph_num = document.getElementById("phone_num").value;
+    AccountKit.login('PHONE',
+      {countryCode: country_code, phoneNumber: ph_num}, // will use default values if this is not specified
+      loginCallback);
+  }
+</script>
